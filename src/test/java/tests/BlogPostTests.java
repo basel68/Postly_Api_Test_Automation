@@ -2,6 +2,7 @@ package tests;
 
 import configurations.TestConfiguration;
 import models.BlogPostModel;
+import models.BlogPostRequestModel;
 import models.CategoryModel;
 import org.example.ApiServer;
 import org.example.DataFaker;
@@ -12,6 +13,7 @@ import org.testng.asserts.SoftAssert;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.Map;
+
 
 public class BlogPostTests extends TestConfiguration {
 
@@ -32,7 +34,7 @@ public class BlogPostTests extends TestConfiguration {
 
     @Test
     public void getBlogPostById() {
-        BlogPostModel blogPost = createSampleBlogPost();
+        BlogPostRequestModel blogPost = createSampleBlogPost();
 
         var postResponse = ApiServer.Post(
                 Map.of("Content-Type", "application/json"),
@@ -61,7 +63,7 @@ public class BlogPostTests extends TestConfiguration {
 
     @Test
     public void createBlogPost() {
-        BlogPostModel blogPost = createSampleBlogPost();
+        BlogPostRequestModel blogPost = createSampleBlogPost();
 
         var response = ApiServer.Post(
                 Map.of("Content-Type", "application/json"),
@@ -85,7 +87,7 @@ public class BlogPostTests extends TestConfiguration {
 
     @Test
     public void updateBlogPost() {
-        BlogPostModel blogPost = createSampleBlogPost();
+        BlogPostRequestModel blogPost = createSampleBlogPost();
 
         var postResponse = ApiServer.Post(
                 Map.of("Content-Type", "application/json"),
@@ -123,7 +125,7 @@ public class BlogPostTests extends TestConfiguration {
 
     @Test
     public void deleteBlogPost() {
-        BlogPostModel blogPost = createSampleBlogPost();
+        BlogPostRequestModel blogPost = createSampleBlogPost();
         System.out.println(Arrays.toString(blogPost.getCategories()));
         var postResponse = ApiServer.Post(
                 Map.of("Content-Type", "application/json"),
@@ -149,7 +151,7 @@ public class BlogPostTests extends TestConfiguration {
     }
 
     // Helper method to create a sample BlogPostModel with real categories
-    private BlogPostModel createSampleBlogPost() {
+    private BlogPostRequestModel createSampleBlogPost() {
 
         var response= ApiServer.Get(
                 Map.of(),
@@ -158,7 +160,7 @@ public class BlogPostTests extends TestConfiguration {
                 "admin/Categories"
         );
         CategoryModel[] categories=response.as(CategoryModel[].class);
-        return BlogPostModel.builder()
+        return BlogPostRequestModel.builder()
                 .title(DataFaker.getRandomName())
                 .shortDescription(DataFaker.getRandomName())
                 .content(DataFaker.getRandomName())
@@ -167,8 +169,9 @@ public class BlogPostTests extends TestConfiguration {
                 .publishedDate(Helpers.formatDateToISO8601(new Date()))
                 .author(DataFaker.getRandomName())
                 .isVisible(true)
-                .categories(new CategoryModel[] {
-//                        new CategoryModel(categories[0].getId(), categories[0].getName(), categories[0].getUrlHandle())
+                .categories(new String[]{
+                        categories[0].getId(),
+                        categories[1].getId()
                 })
                 .build();
 

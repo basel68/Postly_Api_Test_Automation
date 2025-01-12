@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
 
-import java.util.Date;
+        import java.util.Date;
 import java.util.List;
 
 @Setter
@@ -14,7 +14,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class BlogPostModel {
+public class BlogPostRequestModel {
     private String id;
     private String title;
     private String shortDescription;
@@ -25,5 +25,5 @@ public class BlogPostModel {
     private String author;
     @JsonProperty("isVisible")
     private boolean isVisible;
-    private CategoryModel[] categories;
+    private String[] categories;
 }

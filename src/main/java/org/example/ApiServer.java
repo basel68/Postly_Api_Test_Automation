@@ -33,6 +33,7 @@ public class ApiServer {
                 pathParams(pathParams).
                 queryParams(queryParams).
                 body(body).
+                log().all().
                 post(url);
     }
 

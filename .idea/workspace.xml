@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68543850-7e7d-48f6-b187-071cc63e4cf4" name="Changes" comment="" />
+    <list default="true" id="68543850-7e7d-48f6-b187-071cc63e4cf4" name="Changes" comment="initial commit">
+      <change afterPath="$PROJECT_DIR$/src/test/java/models/BlogPostRequestModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ApiServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ApiServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/models/BlogPostModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/models/BlogPostModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/models/CategoryModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/models/CategoryModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/BlogPostTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/BlogPostTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/ImageTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/ImageTests.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,52 +52,41 @@
     <option name="openDirectoriesWithSingleClick" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "TestNG.AuthTests.login.executor": "Run",
-    "TestNG.AuthTests.register.executor": "Run",
-    "TestNG.BlogPostTests.deleteBlogPost.executor": "Run",
-    "TestNG.BlogPostTests.executor": "Run",
-    "TestNG.BlogPostTests.getAllBlogPosts.executor": "Run",
-    "TestNG.BlogPostTests.updateBlogPost.executor": "Run",
-    "TestNG.CategoryTests.createCategory.executor": "Debug",
-    "TestNG.CategoryTests.deleteCategory.executor": "Run",
-    "TestNG.CategoryTests.executor": "Run",
-    "TestNG.CategoryTests.getAllCategories.executor": "Run",
-    "TestNG.CategoryTests.getCategoryById.executor": "Run",
-    "TestNG.ImageTests.addImage.executor": "Run",
-    "TestNG.ImageTests.executor": "Run",
-    "TestNG.ImageTests.getAllImages (1).executor": "Debug",
-    "TestNG.ImageTests.getAllImages.executor": "Run",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/luftborn/.NET/Postly_Api_Test_Automation",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;TestNG.&lt;default&gt;.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.AuthTests.login.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.AuthTests.register.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.BlogPostTests.deleteBlogPost.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.BlogPostTests.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.BlogPostTests.getAllBlogPosts.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.BlogPostTests.updateBlogPost.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.CategoryTests.createCategory.executor&quot;: &quot;Debug&quot;,
+    &quot;TestNG.CategoryTests.deleteCategory.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.CategoryTests.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.CategoryTests.getAllCategories.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.CategoryTests.getCategoryById.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.ImageTests.addImage.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.ImageTests.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.ImageTests.getAllImages (1).executor&quot;: &quot;Debug&quot;,
+    &quot;TestNG.ImageTests.getAllImages.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/luftborn/.NET/Postly_Api_Test_Automation&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="TestNG.AuthTests.register">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.Main" />
-      <module name="Postly_Api_Test_Automation" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AuthTests.login" type="TestNG" temporary="true" nameIsGenerated="true">
+}</component>
+  <component name="RunManager" selected="TestNG.&lt;default&gt;">
+    <configuration name="BlogPostTests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Postly_Api_Test_Automation" />
       <extension name="coverage">
         <pattern>
@@ -97,16 +95,15 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.AuthTests" />
-      <option name="METHOD_NAME" value="login" />
-      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="MAIN_CLASS_NAME" value="tests.BlogPostTests" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AuthTests.register" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="BlogPostTests.deleteBlogPost" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Postly_Api_Test_Automation" />
       <extension name="coverage">
         <pattern>
@@ -115,8 +112,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.AuthTests" />
-      <option name="METHOD_NAME" value="register" />
+      <option name="MAIN_CLASS_NAME" value="tests.BlogPostTests" />
+      <option name="METHOD_NAME" value="deleteBlogPost" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -124,25 +121,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CategoryTests.getAllCategories" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Postly_Api_Test_Automation" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.CategoryTests" />
-      <option name="METHOD_NAME" value="getAllCategories" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ImageTests" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ImageTests.addImage" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Postly_Api_Test_Automation" />
       <extension name="coverage">
         <pattern>
@@ -152,20 +131,47 @@
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.ImageTests" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="METHOD_NAME" value="addImage" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="&lt;default&gt;" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Postly_Api_Test_Automation" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="PACKAGE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Python tests in test" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="Postly_Api_Test_Automation" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/src/test&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.AuthTests.register" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="TestNG.AuthTests.login" />
-        <item itemvalue="TestNG.CategoryTests.getAllCategories" />
-        <item itemvalue="TestNG.ImageTests" />
+        <item itemvalue="TestNG.&lt;default&gt;" />
+        <item itemvalue="TestNG.ImageTests.addImage" />
+        <item itemvalue="TestNG.BlogPostTests" />
+        <item itemvalue="TestNG.BlogPostTests.deleteBlogPost" />
+        <item itemvalue="Python tests.Python tests in test" />
       </list>
     </recent_temporary>
   </component>
@@ -182,7 +188,11 @@
       <workItem from="1736090525268" duration="56000" />
       <workItem from="1736090640175" duration="18723000" />
       <workItem from="1736112796330" duration="57000" />
-      <workItem from="1736113131403" duration="925000" />
+      <workItem from="1736113131403" duration="1501000" />
+      <workItem from="1736619974616" duration="188000" />
+      <workItem from="1736686201293" duration="406000" />
+      <workItem from="1736686619500" duration="3672000" />
+      <workItem from="1736691324809" duration="4209000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -212,16 +222,5 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
     <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/ApiServer.java</url>
-          <line>19</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
