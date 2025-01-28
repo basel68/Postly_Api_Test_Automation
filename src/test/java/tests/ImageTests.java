@@ -26,7 +26,7 @@ public class ImageTests extends TestConfiguration {
         Validators.validateStatusCode(200, response);
         Validators.validateResponseTime(1500, response);
 
-        Validators.assertAll();
+        Validators.softAssert.assertAll();
     }
     @Test(enabled = false)
     public void addImage() {
@@ -54,6 +54,6 @@ public class ImageTests extends TestConfiguration {
         Validators.softAssert = new SoftAssert();
         Validators.validateStatusCode(200, response);
         Validators.validateResponseTime(1500, response);
-        Validators.assertAll();
+        Validators.softAssert.assertAll();
     }
 }

@@ -24,7 +24,7 @@ public class CategoryTests extends TestConfiguration {
         Validators.validateStatusCode(200, response);
         Validators.validateResponseTime(1500, response);
 
-        Validators.assertAll();
+        Validators.softAssert.assertAll();
     }
     @Test
     public void getCategoryById() {
@@ -51,12 +51,12 @@ public class CategoryTests extends TestConfiguration {
         Validators.validateResponseTime(1500, getCategoryByIdResponse);
 
         var deleteResponse = ApiServer.Delete(
-                Map.of(),
+                Map.of("Content-Type", "application/json"),
                 Map.of("id", categoryReceived.getId()),
                 Map.of(),
                 "admin/Categories/{id}"
         );
-        Validators.assertAll();
+        Validators.softAssert.assertAll();
     }
 
     @Test
@@ -85,7 +85,7 @@ public class CategoryTests extends TestConfiguration {
                 Map.of(),
                 "admin/Categories/{id}"
         );
-        Validators.assertAll();
+        Validators.softAssert.assertAll();
     }
 
     @Test
@@ -127,7 +127,7 @@ public class CategoryTests extends TestConfiguration {
                 "admin/Categories/{id}"
         );
 
-        Validators.assertAll();
+        Validators.softAssert.assertAll();
     }
 
     @Test
@@ -152,7 +152,7 @@ public class CategoryTests extends TestConfiguration {
         Validators.softAssert = new SoftAssert();
         Validators.validateStatusCode(200, deleteResponse);
         Validators.validateResponseTime(1500, deleteResponse);
-        Validators.assertAll();
+        Validators.softAssert.assertAll();
     }
 
 }

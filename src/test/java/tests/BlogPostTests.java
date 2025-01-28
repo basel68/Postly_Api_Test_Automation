@@ -29,7 +29,7 @@ public class BlogPostTests extends TestConfiguration {
         Validators.validateStatusCode(200, response);
         Validators.validateResponseTime(1500, response);
 
-        Validators.assertAll();
+        Validators.softAssert.assertAll();
     }
 
     @Test
@@ -58,7 +58,7 @@ public class BlogPostTests extends TestConfiguration {
         Validators.validateResponseTime(1500, getResponse);
 
         deleteBlogPost(blogPostReceived.getId());
-        Validators.assertAll();
+        Validators.softAssert.assertAll();
     }
 
     @Test
@@ -82,7 +82,7 @@ public class BlogPostTests extends TestConfiguration {
         Validators.validateEqual(blogPost.getUrlHandle(), blogPostReceived.getUrlHandle(), "BlogPost URL handle mismatch");
 
         deleteBlogPost(blogPostReceived.getId());
-        Validators.assertAll();
+        Validators.softAssert.assertAll();
     }
 
     @Test
@@ -120,7 +120,7 @@ public class BlogPostTests extends TestConfiguration {
         Validators.validateEqual(blogPost.getUrlHandle(), updatedBlogPost.getUrlHandle(), "BlogPost URL handle not updated correctly");
 
         deleteBlogPost(updatedBlogPost.getId());
-        Validators.assertAll();
+        Validators.softAssert.assertAll();
     }
 
     @Test
@@ -147,7 +147,7 @@ public class BlogPostTests extends TestConfiguration {
         Validators.softAssert = new SoftAssert();
         Validators.validateStatusCode(200, deleteResponse);
         Validators.validateResponseTime(1500, deleteResponse);
-        Validators.assertAll();
+        Validators.softAssert.assertAll();
     }
 
     // Helper method to create a sample BlogPostModel with real categories

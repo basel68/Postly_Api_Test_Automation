@@ -28,7 +28,7 @@ public class AuthTests {
         Validators.validateStatusCode(200, response);
         Validators.validateResponseTime(1500, response);
 
-        Validators.assertAll();
+        Validators.softAssert.assertAll();
     }
     @Test
     public void register(){
@@ -49,6 +49,6 @@ public class AuthTests {
         Validators.validateStatusCode(200, response);
         Validators.validateResponseTime(1500, response);
 
-        Validators.assertAll();
+        Validators.softAssert.assertAll();
     }
 }
